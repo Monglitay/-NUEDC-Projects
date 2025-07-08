@@ -1,0 +1,14 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Car_2.0",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "Car_2.0",
+                "resourceId": "/Car_2.0"
+            }
+        }
+    ]
+}

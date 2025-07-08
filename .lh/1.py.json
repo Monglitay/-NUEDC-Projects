@@ -1,0 +1,18 @@
+{
+    "sourceFile": "1.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1748944918591,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1748944918590,
+            "name": "Commit-0",
+            "content": "import math\r\n\r\n# 给定的参数\r\ni_D = 3.04e-3  # 放大系数 (3.04 mA)\r\nv_GS = 0.669   # 栅源电压\r\nI_DSS = 3.04e-3  # 饱和漏极源极电流\r\n\r\ndef calculate_V_off():\r\n    \"\"\"\r\n    计算截止电压 V_off\r\n    \r\n    公式推导：\r\n    i_D = I_DSS * (1 - v_GS/V_off)^2\r\n    \"\"\"\r\n    # 使用数值方法求解 V_off\r\n    def f(V_off):\r\n        return I_DSS * (1 - v_GS/V_off)**2 - i_D\r\n    \r\n    # 使用二分法求解\r\n    def bisection(a, b, tolerance=1e-6, max_iterations=100):\r\n        for _ in range(max_iterations):\r\n            c = (a + b) / 2\r\n            fc = f(c)\r\n            \r\n            if abs(fc) < tolerance:\r\n                return c\r\n            \r\n            if f(a) * fc < 0:\r\n                b = c\r\n            else:\r\n                a = c\r\n        \r\n        return (a + b) / 2\r\n    \r\n    # 初始搜索区间\r\n    V_off = bisection(v_GS, 10)  # 假设 V_off 在 v_GS 到 10 之间\r\n    \r\n    return V_off\r\n\r\n# 计算并打印结果\r\nV_off = calculate_V_off()\r\nprint(f\"V_off 的值为: {V_off:.4f} V\")\r\n\r\n# 验证计算结果\r\ndef verify_calculation(V_off):\r\n    calculated_i_D = I_DSS * (1 - v_GS/V_off)**2\r\n    print(f\"原始 i_D: {i_D:.4e} A\")\r\n    print(f\"计算的 i_D: {calculated_i_D:.4e} A\")\r\n    print(f\"误差: {abs(calculated_i_D - i_D)/i_D * 100:.4f}%\")\r\n\r\nverify_calculation(V_off)\r\n\r\n"
+        }
+    ]
+}

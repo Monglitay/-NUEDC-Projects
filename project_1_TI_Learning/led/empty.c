@@ -33,33 +33,38 @@
 #include "ti_msp_dl_config.h"
 #include "delay.h"
 #include "key.h"
-
+int led_flag = 0;
+int last_ticks = 0;
 void key_cb(void)
 {
-    DL_GPIO_togglePins(LED_PORT, LED_PIN_14_PIN);
+    led_flag=1;
 }
-
-void key_cl_cb(uint8_t clicks)
+void Led_Proc(void)
 {
-    DL_GPIO_togglePins(LED_PORT, LED_PIN_14_PIN);
+    if (led_flag == 1)
+    {
+        DL_GPIO_setPins(LED_PORT, LED_PIN_14_PIN);
+        last_ticks = get_ticks();
+        led_flag = 0;
+        return;
+    }
+    if(get_ticks()-last_ticks<=3000)
+    {
+        DL_GPIO_clearPins(LED_PORT, LED_PIN_14_PIN);
+    }
 }
 int main(void)
 {
-    uint32_t crurrent;
     SYSCFG_DL_init();
     Key_InitTypedef Key_InitStruct;
     Key_InitStruct.key_port = KEY_PORT;
     Key_InitStruct.key_pin = KEY_PIN_18_PIN;
     Key_InitStruct.key_pressed_cb = key_cb;
-    Key_InitStruct.key_long_pressed_cb = key_cl_cb;
-    Key_InitStruct.key_released_cb = key_cb;
     Key_TypeDef Key1;
     Key_Init(&Key1, &Key_InitStruct);
     while (1)
     {
         Key_Proc(&Key1);
-        
+        Led_Proc();
     }
 }
-
-

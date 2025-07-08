@@ -9,6 +9,8 @@
 /**
  * Import the modules used in this configuration.
  */
+const ADC12         = scripting.addModule("/ti/driverlib/ADC12", {}, false);
+const ADC121        = ADC12.addInstance();
 const Board         = scripting.addModule("/ti/driverlib/Board");
 const GPIO          = scripting.addModule("/ti/driverlib/GPIO", {}, false);
 const GPIO1         = GPIO.addInstance();
@@ -44,6 +46,11 @@ mux4.inputSelect = "EXHFMUX_XTAL";
 
 const pinFunction4     = system.clockTree["HFXT"];
 pinFunction4.inputFreq = 8;
+
+ADC121.$name                      = "ADC12_0";
+ADC121.peripheral.$assign         = "ADC0";
+ADC121.peripheral.adcPin0.$assign = "PA27";
+ADC121.adcPin0Config.$name        = "ti_driverlib_gpio_GPIOPinGeneric7";
 
 Board.InitPriority0               = "/ti/driverlib/MCAN";
 Board.peripheral.$assign          = "DEBUGSS";
@@ -293,7 +300,7 @@ GPIO3.associatedPins[0].pin.$suggestSolution = "PB24";
 GPIO3.associatedPins[1].pin.$suggestSolution = "PB20";
 GPIO4.associatedPins[0].pin.$suggestSolution = "PA15";
 GPIO4.associatedPins[1].pin.$suggestSolution = "PA16";
-GPIO5.associatedPins[0].pin.$suggestSolution = "PA27";
+GPIO5.associatedPins[0].pin.$suggestSolution = "<error>";
 GPIO5.associatedPins[1].pin.$suggestSolution = "PA26";
 GPIO5.associatedPins[2].pin.$suggestSolution = "PA25";
 GPIO5.associatedPins[3].pin.$suggestSolution = "PA24";
