@@ -1,6 +1,8 @@
 # FIXED
 
-ti_msp_dl_config.o: ti_msp_dl_config.c ti_msp_dl_config.h \
+app/openmv/app_openmv.o: ../app/openmv/app_openmv.c \
+ ../app/openmv/app_openmv.h D:/NUEDC/Car_2.0/lib/usart/usart.h \
+ syscfg/ti_msp_dl_config.h \
  C:/TI/mspm0_sdk_2_04_00_06/source/ti/devices/msp/msp.h \
  C:/TI/mspm0_sdk_2_04_00_06/source/ti/devices/DeviceFamily.h \
  C:/TI/mspm0_sdk_2_04_00_06/source/ti/devices/msp/m0p/mspm0g350x.h \
@@ -73,8 +75,12 @@ ti_msp_dl_config.o: ti_msp_dl_config.c ti_msp_dl_config.h \
  C:/TI/mspm0_sdk_2_04_00_06/source/ti/driverlib/dl_vref.h \
  C:/TI/mspm0_sdk_2_04_00_06/source/ti/driverlib/dl_wwdt.h \
  C:/TI/mspm0_sdk_2_04_00_06/source/ti/driverlib/m0p/dl_interrupt.h \
- C:/TI/mspm0_sdk_2_04_00_06/source/ti/driverlib/m0p/dl_systick.h
-ti_msp_dl_config.h:
+ C:/TI/mspm0_sdk_2_04_00_06/source/ti/driverlib/m0p/dl_systick.h \
+ D:/NUEDC/Car_2.0/lib/command/command.h \
+ D:/NUEDC/Car_2.0/app/BLE05/app_ble05.h
+../app/openmv/app_openmv.h:
+D:/NUEDC/Car_2.0/lib/usart/usart.h:
+syscfg/ti_msp_dl_config.h:
 C:/TI/mspm0_sdk_2_04_00_06/source/ti/devices/msp/msp.h:
 C:/TI/mspm0_sdk_2_04_00_06/source/ti/devices/DeviceFamily.h:
 C:/TI/mspm0_sdk_2_04_00_06/source/ti/devices/msp/m0p/mspm0g350x.h:
@@ -148,3 +154,5 @@ C:/TI/mspm0_sdk_2_04_00_06/source/ti/driverlib/dl_vref.h:
 C:/TI/mspm0_sdk_2_04_00_06/source/ti/driverlib/dl_wwdt.h:
 C:/TI/mspm0_sdk_2_04_00_06/source/ti/driverlib/m0p/dl_interrupt.h:
 C:/TI/mspm0_sdk_2_04_00_06/source/ti/driverlib/m0p/dl_systick.h:
+D:/NUEDC/Car_2.0/lib/command/command.h:
+D:/NUEDC/Car_2.0/app/BLE05/app_ble05.h:

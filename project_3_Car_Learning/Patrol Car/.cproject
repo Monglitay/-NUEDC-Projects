@@ -103,6 +103,9 @@
                                 <option id="com.ti.ccstudio.buildDefinitions.sysConfig.PACKAGE.1919199600" superClass="com.ti.ccstudio.buildDefinitions.sysConfig.PACKAGE" value="LQFP-48(PT)" valueType="string"/>
                                 <option id="com.ti.ccstudio.buildDefinitions.sysConfig.PART.237888412" superClass="com.ti.ccstudio.buildDefinitions.sysConfig.PART" value="Default" valueType="string"/>
                                 <option id="com.ti.ccstudio.buildDefinitions.sysConfig.CONTEXT.1439676903" superClass="com.ti.ccstudio.buildDefinitions.sysConfig.CONTEXT" value="system" valueType="string"/>
+                                <option id="com.ti.ccstudio.buildDefinitions.sysConfig.OTHER_FLAGS.904353022" superClass="com.ti.ccstudio.buildDefinitions.sysConfig.OTHER_FLAGS" valueType="stringList">
+                                    <listOptionValue value=""/>
+                                </option>
                             </tool>
                         </toolChain>
                     </folderInfo>

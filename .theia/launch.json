@@ -9,6 +9,24 @@
                 "name": "Car_2.0",
                 "resourceId": "/Car_2.0"
             }
+        },
+        {
+            "name": "Patrol Car",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "Patrol Car",
+                "resourceId": "/Patrol Car"
+            }
+        },
+        {
+            "name": "Car_2.0 (1)",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "Car_2.0",
+                "resourceId": "/Car_2.0/__ccs_generatedSource"
+            }
         }
     ]
 }

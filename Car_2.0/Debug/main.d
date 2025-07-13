@@ -1,6 +1,7 @@
 # FIXED
 
-main.o: ../main.c ti_msp_dl_config.h \
+main.o: ../main.c ../main.h \
+ syscfg/ti_msp_dl_config.h \
  C:/TI/mspm0_sdk_2_04_00_06/source/ti/devices/msp/msp.h \
  C:/TI/mspm0_sdk_2_04_00_06/source/ti/devices/DeviceFamily.h \
  C:/TI/mspm0_sdk_2_04_00_06/source/ti/devices/msp/m0p/mspm0g350x.h \
@@ -77,9 +78,14 @@ main.o: ../main.c ti_msp_dl_config.h \
  D:/NUEDC/Car_2.0/app/BLE05/app_ble05.h \
  D:/NUEDC/Car_2.0/lib/usart/usart.h \
  D:/NUEDC/Car_2.0/app/JY61P/app_jy61p.h D:/NUEDC/Car_2.0/lib/i2c/i2c.h \
- D:/NUEDC/Car_2.0/app/openmv/openmv.h \
- D:/NUEDC/Car_2.0/lib/delay/delay.h
-ti_msp_dl_config.h:
+ D:/NUEDC/Car_2.0/app/openmv/app_openmv.h \
+ D:/NUEDC/Car_2.0/lib/command/command.h \
+ D:/NUEDC/Car_2.0/app/button/app_button.h \
+ D:/NUEDC/Car_2.0/lib/key/key.h D:/NUEDC/Car_2.0/lib/delay/delay.h \
+ D:/NUEDC/Car_2.0/app/AT8236/app_AT8236.h \
+ D:/NUEDC/Car_2.0/test/AT8236/test_AT8236.h D:/NUEDC/Car_2.0/main.h
+../main.h:
+syscfg/ti_msp_dl_config.h:
 C:/TI/mspm0_sdk_2_04_00_06/source/ti/devices/msp/msp.h:
 C:/TI/mspm0_sdk_2_04_00_06/source/ti/devices/DeviceFamily.h:
 C:/TI/mspm0_sdk_2_04_00_06/source/ti/devices/msp/m0p/mspm0g350x.h:
@@ -157,5 +163,11 @@ D:/NUEDC/Car_2.0/app/BLE05/app_ble05.h:
 D:/NUEDC/Car_2.0/lib/usart/usart.h:
 D:/NUEDC/Car_2.0/app/JY61P/app_jy61p.h:
 D:/NUEDC/Car_2.0/lib/i2c/i2c.h:
-D:/NUEDC/Car_2.0/app/openmv/openmv.h:
+D:/NUEDC/Car_2.0/app/openmv/app_openmv.h:
+D:/NUEDC/Car_2.0/lib/command/command.h:
+D:/NUEDC/Car_2.0/app/button/app_button.h:
+D:/NUEDC/Car_2.0/lib/key/key.h:
 D:/NUEDC/Car_2.0/lib/delay/delay.h:
+D:/NUEDC/Car_2.0/app/AT8236/app_AT8236.h:
+D:/NUEDC/Car_2.0/test/AT8236/test_AT8236.h:
+D:/NUEDC/Car_2.0/main.h:

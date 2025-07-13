@@ -4,7 +4,7 @@
 // 按键相关的时间常量定义
 #define KEY_SETTLING_TIME             10   // 按钮消抖延迟（单位：毫秒）
 #define KEY_CLICK_INTERVAL            200  // 按钮多击时每次点击的最大时间间隔（单位：毫秒）
-#define KEY_LONG_PRESS_THRESHOLD      1000 // 按钮长按最小时间（单位：毫秒）
+#define KEY_LONG_PRESS_THRESHOLD      300 // 按钮长按最小时间（单位：毫秒）
 #define KEY_LONG_PRESS_TICK_INTERNVAL 100  // 长按后持续触发的时间间隔（单位：毫秒）
 
 // 按钮事件回调函数原型

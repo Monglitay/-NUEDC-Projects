@@ -1,7 +1,7 @@
 # FIXED
 
 lib/i2c/i2c.o: ../lib/i2c/i2c.c ../lib/i2c/i2c.h \
- ti_msp_dl_config.h \
+ syscfg/ti_msp_dl_config.h \
  C:/TI/mspm0_sdk_2_04_00_06/source/ti/devices/msp/msp.h \
  C:/TI/mspm0_sdk_2_04_00_06/source/ti/devices/DeviceFamily.h \
  C:/TI/mspm0_sdk_2_04_00_06/source/ti/devices/msp/m0p/mspm0g350x.h \
@@ -77,7 +77,7 @@ lib/i2c/i2c.o: ../lib/i2c/i2c.c ../lib/i2c/i2c.h \
  C:/TI/mspm0_sdk_2_04_00_06/source/ti/driverlib/m0p/dl_systick.h \
  D:/NUEDC/Car_2.0/lib/delay/delay.h
 ../lib/i2c/i2c.h:
-ti_msp_dl_config.h:
+syscfg/ti_msp_dl_config.h:
 C:/TI/mspm0_sdk_2_04_00_06/source/ti/devices/msp/msp.h:
 C:/TI/mspm0_sdk_2_04_00_06/source/ti/devices/DeviceFamily.h:
 C:/TI/mspm0_sdk_2_04_00_06/source/ti/devices/msp/m0p/mspm0g350x.h:

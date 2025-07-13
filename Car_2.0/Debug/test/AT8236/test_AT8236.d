@@ -1,8 +1,8 @@
 # FIXED
 
-app/openmv/openmv.o: ../app/openmv/openmv.c ../app/openmv/openmv.h \
- D:/NUEDC/Car_2.0/lib/usart/usart.h \
- ti_msp_dl_config.h \
+test/AT8236/test_AT8236.o: ../test/AT8236/test_AT8236.c \
+ ../test/AT8236/test_AT8236.h D:/NUEDC/Car_2.0/main.h \
+ syscfg/ti_msp_dl_config.h \
  C:/TI/mspm0_sdk_2_04_00_06/source/ti/devices/msp/msp.h \
  C:/TI/mspm0_sdk_2_04_00_06/source/ti/devices/DeviceFamily.h \
  C:/TI/mspm0_sdk_2_04_00_06/source/ti/devices/msp/m0p/mspm0g350x.h \
@@ -76,10 +76,17 @@ app/openmv/openmv.o: ../app/openmv/openmv.c ../app/openmv/openmv.h \
  C:/TI/mspm0_sdk_2_04_00_06/source/ti/driverlib/dl_wwdt.h \
  C:/TI/mspm0_sdk_2_04_00_06/source/ti/driverlib/m0p/dl_interrupt.h \
  C:/TI/mspm0_sdk_2_04_00_06/source/ti/driverlib/m0p/dl_systick.h \
- D:/NUEDC/Car_2.0/lib/command/command.h
-../app/openmv/openmv.h:
-D:/NUEDC/Car_2.0/lib/usart/usart.h:
-ti_msp_dl_config.h:
+ D:/NUEDC/Car_2.0/app/BLE05/app_ble05.h \
+ D:/NUEDC/Car_2.0/lib/usart/usart.h \
+ D:/NUEDC/Car_2.0/app/JY61P/app_jy61p.h D:/NUEDC/Car_2.0/lib/i2c/i2c.h \
+ D:/NUEDC/Car_2.0/app/openmv/app_openmv.h \
+ D:/NUEDC/Car_2.0/lib/command/command.h \
+ D:/NUEDC/Car_2.0/app/button/app_button.h \
+ D:/NUEDC/Car_2.0/lib/key/key.h D:/NUEDC/Car_2.0/lib/delay/delay.h \
+ D:/NUEDC/Car_2.0/app/AT8236/app_AT8236.h
+../test/AT8236/test_AT8236.h:
+D:/NUEDC/Car_2.0/main.h:
+syscfg/ti_msp_dl_config.h:
 C:/TI/mspm0_sdk_2_04_00_06/source/ti/devices/msp/msp.h:
 C:/TI/mspm0_sdk_2_04_00_06/source/ti/devices/DeviceFamily.h:
 C:/TI/mspm0_sdk_2_04_00_06/source/ti/devices/msp/m0p/mspm0g350x.h:
@@ -153,4 +160,13 @@ C:/TI/mspm0_sdk_2_04_00_06/source/ti/driverlib/dl_vref.h:
 C:/TI/mspm0_sdk_2_04_00_06/source/ti/driverlib/dl_wwdt.h:
 C:/TI/mspm0_sdk_2_04_00_06/source/ti/driverlib/m0p/dl_interrupt.h:
 C:/TI/mspm0_sdk_2_04_00_06/source/ti/driverlib/m0p/dl_systick.h:
+D:/NUEDC/Car_2.0/app/BLE05/app_ble05.h:
+D:/NUEDC/Car_2.0/lib/usart/usart.h:
+D:/NUEDC/Car_2.0/app/JY61P/app_jy61p.h:
+D:/NUEDC/Car_2.0/lib/i2c/i2c.h:
+D:/NUEDC/Car_2.0/app/openmv/app_openmv.h:
 D:/NUEDC/Car_2.0/lib/command/command.h:
+D:/NUEDC/Car_2.0/app/button/app_button.h:
+D:/NUEDC/Car_2.0/lib/key/key.h:
+D:/NUEDC/Car_2.0/lib/delay/delay.h:
+D:/NUEDC/Car_2.0/app/AT8236/app_AT8236.h:

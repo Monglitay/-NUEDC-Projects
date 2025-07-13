@@ -28,7 +28,7 @@ static int I2C_Disable(I2C_Typedef *I2CX)
     DL_GPIO_initDigitalOutput(I2CX->gpio_i2c_iomux_scl);
     DL_GPIO_initDigitalInputFeatures(I2CX->gpio_i2c_iomux_sda,
         DL_GPIO_INVERSION_DISABLE, DL_GPIO_RESISTOR_NONE,
-         DL_GPIO_HYSTERESIS_DISABLE, DL_GPIO_WAKEUP_DISABLE);
+        DL_GPIO_HYSTERESIS_DISABLE, DL_GPIO_WAKEUP_DISABLE);
     DL_GPIO_clearPins(I2CX->gpio_i2c_scl_port, I2CX->gpio_i2c_scl_pin);
     DL_GPIO_enableOutput(I2CX->gpio_i2c_sda_port, I2CX->gpio_i2c_sda_pin);
     return 0;

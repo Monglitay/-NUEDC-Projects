@@ -3,7 +3,7 @@
 void Command_Init(Command_Typedef *command)
 {
     command->readIndex = 0;
-    command->writeIndex = 0;
+    command->writeIndex = 1;
 }
 /**
 * @brief 增加读索引
@@ -48,30 +48,29 @@ uint8_t Command_GetRemain(Command_Typedef *command) {
     return BUFFER_SIZE - Command_GetLength(command);
 }
 
-/**
-* @brief 向缓冲区写入数据
-* @param data 要写入的数据指针
-* @param length 要写入的数据长度
-* @return 写入的数据长度
-*/
-uint8_t Command_Write(Command_Typedef *command,uint8_t *data, uint8_t length) {
+uint8_t Command_Write(Command_Typedef *command, uint8_t *data, uint8_t length) {
     // 如果缓冲区不足 则不写入数据 返回0
     if (Command_GetRemain(command) < length) {
         return 0;
     }
+    
     // 使用memcpy函数将数据写入缓冲区
     if (command->writeIndex + length < BUFFER_SIZE) {
+        // 数据可以一次性写入
         memcpy(command->buffer + command->writeIndex, data, length);
-        command->writeIndex += length;
+        command->writeIndex += length ; // 更新写指针并取模
     } else {
+        // 数据需要分两次写入
         uint8_t firstLength = BUFFER_SIZE - command->writeIndex;
+        // 写入第一部分
         memcpy(command->buffer + command->writeIndex, data, firstLength);
+        // 写入第二部分
         memcpy(command->buffer, data + firstLength, length - firstLength);
-        command-> writeIndex = length - firstLength;
+        command->writeIndex = length - firstLength;  // 这种情况下不需要取模，因为必然小于BUFFER_SIZE
     }
+    
     return length;
 }
-
 /**
 * @brief 尝试获取一条指令
 * @param command 指令存放指针

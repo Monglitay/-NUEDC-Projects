@@ -2,7 +2,7 @@
 
 lib/pid/pid.o: ../lib/pid/pid.c ../lib/pid/pid.h \
  D:/NUEDC/Car_2.0/lib/delay/delay.h \
- ti_msp_dl_config.h \
+ syscfg/ti_msp_dl_config.h \
  C:/TI/mspm0_sdk_2_04_00_06/source/ti/devices/msp/msp.h \
  C:/TI/mspm0_sdk_2_04_00_06/source/ti/devices/DeviceFamily.h \
  C:/TI/mspm0_sdk_2_04_00_06/source/ti/devices/msp/m0p/mspm0g350x.h \
@@ -78,7 +78,7 @@ lib/pid/pid.o: ../lib/pid/pid.c ../lib/pid/pid.h \
  C:/TI/mspm0_sdk_2_04_00_06/source/ti/driverlib/m0p/dl_systick.h
 ../lib/pid/pid.h:
 D:/NUEDC/Car_2.0/lib/delay/delay.h:
-ti_msp_dl_config.h:
+syscfg/ti_msp_dl_config.h:
 C:/TI/mspm0_sdk_2_04_00_06/source/ti/devices/msp/msp.h:
 C:/TI/mspm0_sdk_2_04_00_06/source/ti/devices/DeviceFamily.h:
 C:/TI/mspm0_sdk_2_04_00_06/source/ti/devices/msp/m0p/mspm0g350x.h:

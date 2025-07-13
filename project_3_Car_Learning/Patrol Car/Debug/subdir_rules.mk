@@ -25,6 +25,7 @@ device.cmd.genlibs: build-1009552559
 ti_msp_dl_config.c: build-1009552559
 ti_msp_dl_config.h: build-1009552559
 Event.dot: build-1009552559
+C:/TI/mspm0_sdk_2_04_00_06/source/ti/devices/msp/m0p/startup_system_files/ticlang/startup_mspm0g350x_ticlang.c: build-1009552559
 
 %.o: ./%.c $(GEN_OPTS) | $(GEN_FILES) $(GEN_MISC_FILES)
 	@echo 'Building file: "$<"'
