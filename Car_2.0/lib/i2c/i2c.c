@@ -149,63 +149,62 @@ int I2C_ReadArray(I2C_Typedef *I2CX, uint8_t devAddr, uint8_t regAddr, uint8_t *
     
     start = get_ticks();
     
-    // 1. 发送寄存器地址
+    // 清空FIFO
+    DL_I2C_flushControllerTXFIFO(I2CX->i2c_inst);
+    DL_I2C_flushControllerRXFIFO(I2CX->i2c_inst);
+    
+    // 1. 写阶段：发送寄存器地址
     DL_I2C_fillControllerTXFIFO(I2CX->i2c_inst, &regAddr, 1);
-    
-    while (!(DL_I2C_getControllerStatus(I2CX->i2c_inst) & DL_I2C_CONTROLLER_STATUS_IDLE)) {
-        current = get_ticks();
-        if (current >= (start + I2C_TIMEOUT_MS)) {
-            I2C_SDA_Unlock(I2CX);
-            return 1;
-        }
-    }
-    
     DL_I2C_startControllerTransfer(I2CX->i2c_inst, devAddr, DL_I2C_CONTROLLER_DIRECTION_TX, 1);
     
-    while (DL_I2C_getControllerStatus(I2CX->i2c_inst) & DL_I2C_CONTROLLER_STATUS_BUSY_BUS) {
+    // 等待写传输完成
+    do {
         current = get_ticks();
         if (current >= (start + I2C_TIMEOUT_MS)) {
             I2C_SDA_Unlock(I2CX);
             return 1;
         }
-    }
+    } while (DL_I2C_getControllerStatus(I2CX->i2c_inst) & DL_I2C_CONTROLLER_STATUS_BUSY_BUS);
     
-    while (!(DL_I2C_getControllerStatus(I2CX->i2c_inst) & DL_I2C_CONTROLLER_STATUS_IDLE)) {
+    // 确保控制器完全空闲
+    do {
         current = get_ticks();
         if (current >= (start + I2C_TIMEOUT_MS)) {
             I2C_SDA_Unlock(I2CX);
             return 1;
         }
-    }
+    } while (!(DL_I2C_getControllerStatus(I2CX->i2c_inst) & DL_I2C_CONTROLLER_STATUS_IDLE));
     
-    DL_I2C_flushControllerTXFIFO(I2CX->i2c_inst);
-    
-    // 2. 启动读传输
+    // 2. 读阶段：启动读传输
     DL_I2C_startControllerTransfer(I2CX->i2c_inst, devAddr, DL_I2C_CONTROLLER_DIRECTION_RX, length);
     
-    while (DL_I2C_getControllerStatus(I2CX->i2c_inst) & DL_I2C_CONTROLLER_STATUS_BUSY_BUS) {
-        current = get_ticks();
-        if (current >= (start + I2C_TIMEOUT_MS)) {
-            I2C_SDA_Unlock(I2CX);
-            return 1;
-        }
-    }
-    
-    while (!(DL_I2C_getControllerStatus(I2CX->i2c_inst) & DL_I2C_CONTROLLER_STATUS_IDLE)) {
-        current = get_ticks();
-        if (current >= (start + I2C_TIMEOUT_MS)) {
-            I2C_SDA_Unlock(I2CX);
-            return 1;
-        }
-    }
-    
-    // 3. 读取数据数组
+    // 3. 逐字节读取数据
     for (uint16_t i = 0; i < length; i++) {
+        // 等待RX FIFO中有数据可读
+        do {
+            current = get_ticks();
+            if (current >= (start + I2C_TIMEOUT_MS)) {
+                I2C_SDA_Unlock(I2CX);
+                return 1;
+            }
+        } while (DL_I2C_isControllerRXFIFOEmpty(I2CX->i2c_inst));
+        
+        // 读取一个字节
         data[i] = DL_I2C_receiveControllerData(I2CX->i2c_inst);
     }
     
+    // 等待传输完全结束
+    do {
+        current = get_ticks();
+        if (current >= (start + I2C_TIMEOUT_MS)) {
+            I2C_SDA_Unlock(I2CX);
+            return 1;
+        }
+    } while (DL_I2C_getControllerStatus(I2CX->i2c_inst) & DL_I2C_CONTROLLER_STATUS_BUSY_BUS);
+    
     return 0;
 }
+
 
 int I2C_WriteArray(I2C_Typedef *I2CX, uint8_t devAddr, uint8_t regAddr, uint8_t *data, uint16_t length)
 {

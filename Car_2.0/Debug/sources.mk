@@ -125,11 +125,18 @@ GEN_OPTS__QUOTED :=
 # Every subdirectory with source files must be described here
 SUBDIRS := \
 . \
+app/ADC \
 app/AT8236 \
 app/BLE05 \
+app/Button \
+app/CKP \
+app/Encoder \
 app/JY61P \
-app/button \
-app/openmv \
+app/Motor \
+app/OpenMV \
+app/Servos \
+app/Timer \
+app/W25Q128 \
 lib/command \
 lib/delay \
 lib/i2c \
@@ -137,7 +144,13 @@ lib/key \
 lib/pid \
 lib/servo \
 lib/usart \
+sys/Broad_Init \
+sys/Debug_Proc \
+test/ADC \
 test/AT8236 \
-test/button \
-test/openmv \
+test/Button \
+test/CKP \
+test/Motor \
+test/OpenMV \
+test/Servos \
 

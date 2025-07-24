@@ -120,7 +120,7 @@ void USART_ReceieveString(USART_Typedef *USART, char pstr[256])
 }
 
 // USART0-3 中断处理函数
-void UART0_IRQHandler(void) { UART_IRQHandler(UART0, usart0_ch, usart0_str, &usart0_str_index, &usart0_str_received); }
+//void UART0_IRQHandler(void) { UART_IRQHandler(UART0, usart0_ch, usart0_str, &usart0_str_index, &usart0_str_received); }
 void UART1_IRQHandler(void) { UART_IRQHandler(UART1, usart1_ch, usart1_str, &usart1_str_index, &usart1_str_received); }
 void UART2_IRQHandler(void) { UART_IRQHandler(UART2, usart2_ch, usart2_str, &usart2_str_index, &usart2_str_received); }
 //void UART3_IRQHandler(void) { UART_IRQHandler(UART3, usart3_ch, usart3_str, &usart3_str_index, &usart3_str_received); }

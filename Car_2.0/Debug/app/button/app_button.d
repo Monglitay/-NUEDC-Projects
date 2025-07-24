@@ -1,8 +1,8 @@
 # FIXED
 
-app/button/app_button.o: ../app/button/app_button.c \
- ../app/button/app_button.h D:/NUEDC/Car_2.0/lib/key/key.h \
- syscfg/ti_msp_dl_config.h \
+app/Button/app_button.o: ../app/Button/app_button.c \
+ ../app/Button/app_button.h D:/NUEDC/Car_2.0/lib/key/key.h \
+ ti_msp_dl_config.h \
  C:/TI/mspm0_sdk_2_04_00_06/source/ti/devices/msp/msp.h \
  C:/TI/mspm0_sdk_2_04_00_06/source/ti/devices/DeviceFamily.h \
  C:/TI/mspm0_sdk_2_04_00_06/source/ti/devices/msp/m0p/mspm0g350x.h \
@@ -76,12 +76,12 @@ app/button/app_button.o: ../app/button/app_button.c \
  C:/TI/mspm0_sdk_2_04_00_06/source/ti/driverlib/dl_wwdt.h \
  C:/TI/mspm0_sdk_2_04_00_06/source/ti/driverlib/m0p/dl_interrupt.h \
  C:/TI/mspm0_sdk_2_04_00_06/source/ti/driverlib/m0p/dl_systick.h \
- D:/NUEDC/Car_2.0/app/openmv/app_openmv.h \
+ D:/NUEDC/Car_2.0/app/OpenMV/app_openmv.h \
  D:/NUEDC/Car_2.0/lib/usart/usart.h \
  D:/NUEDC/Car_2.0/lib/command/command.h
-../app/button/app_button.h:
+../app/Button/app_button.h:
 D:/NUEDC/Car_2.0/lib/key/key.h:
-syscfg/ti_msp_dl_config.h:
+ti_msp_dl_config.h:
 C:/TI/mspm0_sdk_2_04_00_06/source/ti/devices/msp/msp.h:
 C:/TI/mspm0_sdk_2_04_00_06/source/ti/devices/DeviceFamily.h:
 C:/TI/mspm0_sdk_2_04_00_06/source/ti/devices/msp/m0p/mspm0g350x.h:
@@ -155,6 +155,6 @@ C:/TI/mspm0_sdk_2_04_00_06/source/ti/driverlib/dl_vref.h:
 C:/TI/mspm0_sdk_2_04_00_06/source/ti/driverlib/dl_wwdt.h:
 C:/TI/mspm0_sdk_2_04_00_06/source/ti/driverlib/m0p/dl_interrupt.h:
 C:/TI/mspm0_sdk_2_04_00_06/source/ti/driverlib/m0p/dl_systick.h:
-D:/NUEDC/Car_2.0/app/openmv/app_openmv.h:
+D:/NUEDC/Car_2.0/app/OpenMV/app_openmv.h:
 D:/NUEDC/Car_2.0/lib/usart/usart.h:
 D:/NUEDC/Car_2.0/lib/command/command.h:

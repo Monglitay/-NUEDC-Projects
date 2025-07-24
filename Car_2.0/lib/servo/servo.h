@@ -10,6 +10,8 @@ typedef struct
     uint8_t gpio_servo_cx_idx;
     uint8_t timer;
     float angle;
+    float max_angle;
+    float min_angle;
     float min_count;
     float max_count;
     float range;
@@ -20,6 +22,8 @@ typedef struct
     GPTIMER_Regs *servo_inst;
     uint8_t gpio_servo_cx_idx;
     uint8_t timer;
+    float max_angle;
+    float min_angle;
 } Servo_InitTypedef;
 
 void Servo_Init(Servo_Typedef *Servo,Servo_InitTypedef *Servo_InitStruct);

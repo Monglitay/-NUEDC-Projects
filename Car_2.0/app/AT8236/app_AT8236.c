@@ -56,10 +56,20 @@ void AT8236_AOUT_SD(int ccr)
 }
 void AT8236_BOUT_FD(int ccr)
 {
+    ccr=-ccr;
     if(ccr>0)
     {
-        BIN1_OUT(ccr);
-        BIN2_OUT(0);
+        if(ccr>=1000)
+        {
+            BIN1_OUT(999);
+            BIN2_OUT(0);
+        }
+        else
+        {
+            BIN1_OUT(ccr);
+            BIN2_OUT(0);
+        }
+
     }
     else if(ccr==0) 
     {
@@ -67,12 +77,22 @@ void AT8236_BOUT_FD(int ccr)
     }
     else
     {
-        BIN1_OUT(0);
-        BIN2_OUT(-ccr);
+        if(ccr<=-1000)
+        {
+            BIN1_OUT(0);
+            BIN2_OUT(999);
+        }
+        else
+        {
+            BIN1_OUT(0);
+            BIN2_OUT(-ccr);
+        }
+        
     }
 }
 void AT8236_BOUT_SD(int ccr)
 {
+    ccr=-ccr;
     if(ccr>0)
     {
         BIN1_OUT(1000);

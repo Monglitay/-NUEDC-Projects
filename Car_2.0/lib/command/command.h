@@ -14,9 +14,10 @@ typedef  struct
     // 循环缓冲区写索引
     uint8_t writeIndex;
 }Command_Typedef;
-
+void Command_AddReadIndex(Command_Typedef *command,uint8_t length);
+uint8_t Command_Read(Command_Typedef *command,uint8_t i);
 uint8_t Command_Write(Command_Typedef *command,uint8_t *data, uint8_t length);
 uint8_t Command_GetCommand(Command_Typedef *command,uint8_t *buffer);
 void Command_Init(Command_Typedef *command);
-
+void Command_Clear(Command_Typedef *command);
 #endif

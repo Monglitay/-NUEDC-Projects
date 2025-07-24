@@ -2,7 +2,7 @@
 
 app/BLE05/app_ble05.o: ../app/BLE05/app_ble05.c ../app/BLE05/app_ble05.h \
  D:/NUEDC/Car_2.0/lib/usart/usart.h \
- syscfg/ti_msp_dl_config.h \
+ ti_msp_dl_config.h \
  C:/TI/mspm0_sdk_2_04_00_06/source/ti/devices/msp/msp.h \
  C:/TI/mspm0_sdk_2_04_00_06/source/ti/devices/DeviceFamily.h \
  C:/TI/mspm0_sdk_2_04_00_06/source/ti/devices/msp/m0p/mspm0g350x.h \
@@ -75,10 +75,11 @@ app/BLE05/app_ble05.o: ../app/BLE05/app_ble05.c ../app/BLE05/app_ble05.h \
  C:/TI/mspm0_sdk_2_04_00_06/source/ti/driverlib/dl_vref.h \
  C:/TI/mspm0_sdk_2_04_00_06/source/ti/driverlib/dl_wwdt.h \
  C:/TI/mspm0_sdk_2_04_00_06/source/ti/driverlib/m0p/dl_interrupt.h \
- C:/TI/mspm0_sdk_2_04_00_06/source/ti/driverlib/m0p/dl_systick.h
+ C:/TI/mspm0_sdk_2_04_00_06/source/ti/driverlib/m0p/dl_systick.h \
+ D:/NUEDC/Car_2.0/lib/delay/delay.h
 ../app/BLE05/app_ble05.h:
 D:/NUEDC/Car_2.0/lib/usart/usart.h:
-syscfg/ti_msp_dl_config.h:
+ti_msp_dl_config.h:
 C:/TI/mspm0_sdk_2_04_00_06/source/ti/devices/msp/msp.h:
 C:/TI/mspm0_sdk_2_04_00_06/source/ti/devices/DeviceFamily.h:
 C:/TI/mspm0_sdk_2_04_00_06/source/ti/devices/msp/m0p/mspm0g350x.h:
@@ -152,3 +153,4 @@ C:/TI/mspm0_sdk_2_04_00_06/source/ti/driverlib/dl_vref.h:
 C:/TI/mspm0_sdk_2_04_00_06/source/ti/driverlib/dl_wwdt.h:
 C:/TI/mspm0_sdk_2_04_00_06/source/ti/driverlib/m0p/dl_interrupt.h:
 C:/TI/mspm0_sdk_2_04_00_06/source/ti/driverlib/m0p/dl_systick.h:
+D:/NUEDC/Car_2.0/lib/delay/delay.h:

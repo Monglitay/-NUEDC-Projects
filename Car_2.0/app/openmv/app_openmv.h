@@ -4,7 +4,7 @@
 #include "ti_msp_dl_config.h"
 #include "command.h"
 USART_Typedef OpenMV;
-Command_Typedef openmv_recvied;
+Command_Typedef openmv_received;
 void OpenMV_Init();
 uint8_t OpenMV_Read_Command(uint8_t *buffer);
 #endif

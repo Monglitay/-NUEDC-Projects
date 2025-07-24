@@ -1,0 +1,34 @@
+{
+  "folders": [
+    {
+      "path": ""
+    },
+    {
+      "path": "project_3_Car_Learning/Patrol Car"
+    }
+  ],
+  "settings": {},
+  "launch": {
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Patrol Car",
+        "type": "ccs-debug",
+        "request": "launch",
+        "projectInfo": {
+          "name": "Patrol Car",
+          "resourceId": "/Patrol Car"
+        }
+      },
+      {
+        "name": "temple",
+        "type": "ccs-debug",
+        "request": "launch",
+        "projectInfo": {
+          "name": "temple",
+          "resourceId": "/temple"
+        }
+      }
+    ]
+  }
+}

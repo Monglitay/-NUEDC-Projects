@@ -111,3 +111,15 @@ uint8_t Command_GetCommand(Command_Typedef *command,uint8_t *buffer) {
         return length;
     }
 }
+
+void Command_Clear(Command_Typedef *command)
+{
+    __disable_irq();  
+    
+    command->readIndex = 0;
+    command->writeIndex = 1;
+    
+    memset(command->buffer, 0, BUFFER_SIZE);
+    
+    __enable_irq();
+}

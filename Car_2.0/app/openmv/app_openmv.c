@@ -7,7 +7,7 @@ uint8_t i;
 
 void OpenMV_Init()
 {
-    Command_Init(&openmv_recvied);
+    Command_Init(&openmv_received);
     USART_InitTypedef USART_InitStruct;
     USART_InitStruct.usart_inst = OPENMV_INST;
     USART_InitStruct.usart_inst_int_irqn = OPENMV_INST_INT_IRQN;
@@ -21,7 +21,7 @@ void UART3_IRQHandler(void)
         case DL_UART_IIDX_RX:
             usart_ch = DL_UART_Main_receiveData(OpenMV.usart_inst);
             //USART_Printf(&BLE05, "%x\n",usart_ch);
-            int ret = Command_Write(&openmv_recvied, &usart_ch, 1);
+            int ret = Command_Write(&openmv_received, &usart_ch, 1);
             //USART_Printf(&BLE05, "%x,%d,%d\n",Command_Read(&openmv_recvied,i),ret, Command_GetRemain(&openmv_recvied));
             //i++;
             break;
@@ -32,5 +32,5 @@ void UART3_IRQHandler(void)
 
 uint8_t OpenMV_Read_Command(uint8_t *buffer)
 {
-    return Command_GetCommand(&openmv_recvied,buffer);
+    return Command_GetCommand(&openmv_received,buffer);
 }

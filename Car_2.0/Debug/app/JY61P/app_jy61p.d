@@ -1,8 +1,7 @@
 # FIXED
 
 app/JY61P/app_jy61p.o: ../app/JY61P/app_jy61p.c ../app/JY61P/app_jy61p.h \
- D:/NUEDC/Car_2.0/lib/i2c/i2c.h \
- syscfg/ti_msp_dl_config.h \
+ D:/NUEDC/Car_2.0/main.h ti_msp_dl_config.h \
  C:/TI/mspm0_sdk_2_04_00_06/source/ti/devices/msp/msp.h \
  C:/TI/mspm0_sdk_2_04_00_06/source/ti/devices/DeviceFamily.h \
  C:/TI/mspm0_sdk_2_04_00_06/source/ti/devices/msp/m0p/mspm0g350x.h \
@@ -76,10 +75,27 @@ app/JY61P/app_jy61p.o: ../app/JY61P/app_jy61p.c ../app/JY61P/app_jy61p.h \
  C:/TI/mspm0_sdk_2_04_00_06/source/ti/driverlib/dl_wwdt.h \
  C:/TI/mspm0_sdk_2_04_00_06/source/ti/driverlib/m0p/dl_interrupt.h \
  C:/TI/mspm0_sdk_2_04_00_06/source/ti/driverlib/m0p/dl_systick.h \
- D:/NUEDC/Car_2.0/lib/delay/delay.h
+ D:/NUEDC/Car_2.0/app/BLE05/app_ble05.h \
+ D:/NUEDC/Car_2.0/lib/usart/usart.h \
+ D:/NUEDC/Car_2.0/app/JY61P/app_jy61p.h \
+ D:/NUEDC/Car_2.0/app/OpenMV/app_openmv.h \
+ D:/NUEDC/Car_2.0/lib/command/command.h \
+ D:/NUEDC/Car_2.0/app/Button/app_button.h \
+ D:/NUEDC/Car_2.0/lib/key/key.h D:/NUEDC/Car_2.0/lib/delay/delay.h \
+ D:/NUEDC/Car_2.0/app/AT8236/app_AT8236.h \
+ D:/NUEDC/Car_2.0/app/Servos/app_servos.h \
+ D:/NUEDC/Car_2.0/app/Motor/app_motor.h D:/NUEDC/Car_2.0/lib/pid/pid.h \
+ D:/NUEDC/Car_2.0/lib/servo/servo.h D:/NUEDC/Car_2.0/app/CKP/app_ckp.h \
+ D:/NUEDC/Car_2.0/app/ADC/app_adc.h \
+ D:/NUEDC/Car_2.0/sys/Broad_Init/sys_broad_init.h \
+ D:/NUEDC/Car_2.0/sys/Debug_Proc/sys_debug_proc.h \
+ D:/NUEDC/Car_2.0/app/W25Q128/app_w25q128.h \
+ D:/NUEDC/Car_2.0/app/Encoder/app_encoder.h \
+ D:/NUEDC/Car_2.0/app/Timer/app_timer.h \
+ D:/NUEDC/Car_2.0/lib/task/task.h
 ../app/JY61P/app_jy61p.h:
-D:/NUEDC/Car_2.0/lib/i2c/i2c.h:
-syscfg/ti_msp_dl_config.h:
+D:/NUEDC/Car_2.0/main.h:
+ti_msp_dl_config.h:
 C:/TI/mspm0_sdk_2_04_00_06/source/ti/devices/msp/msp.h:
 C:/TI/mspm0_sdk_2_04_00_06/source/ti/devices/DeviceFamily.h:
 C:/TI/mspm0_sdk_2_04_00_06/source/ti/devices/msp/m0p/mspm0g350x.h:
@@ -153,4 +169,24 @@ C:/TI/mspm0_sdk_2_04_00_06/source/ti/driverlib/dl_vref.h:
 C:/TI/mspm0_sdk_2_04_00_06/source/ti/driverlib/dl_wwdt.h:
 C:/TI/mspm0_sdk_2_04_00_06/source/ti/driverlib/m0p/dl_interrupt.h:
 C:/TI/mspm0_sdk_2_04_00_06/source/ti/driverlib/m0p/dl_systick.h:
+D:/NUEDC/Car_2.0/app/BLE05/app_ble05.h:
+D:/NUEDC/Car_2.0/lib/usart/usart.h:
+D:/NUEDC/Car_2.0/app/JY61P/app_jy61p.h:
+D:/NUEDC/Car_2.0/app/OpenMV/app_openmv.h:
+D:/NUEDC/Car_2.0/lib/command/command.h:
+D:/NUEDC/Car_2.0/app/Button/app_button.h:
+D:/NUEDC/Car_2.0/lib/key/key.h:
 D:/NUEDC/Car_2.0/lib/delay/delay.h:
+D:/NUEDC/Car_2.0/app/AT8236/app_AT8236.h:
+D:/NUEDC/Car_2.0/app/Servos/app_servos.h:
+D:/NUEDC/Car_2.0/app/Motor/app_motor.h:
+D:/NUEDC/Car_2.0/lib/pid/pid.h:
+D:/NUEDC/Car_2.0/lib/servo/servo.h:
+D:/NUEDC/Car_2.0/app/CKP/app_ckp.h:
+D:/NUEDC/Car_2.0/app/ADC/app_adc.h:
+D:/NUEDC/Car_2.0/sys/Broad_Init/sys_broad_init.h:
+D:/NUEDC/Car_2.0/sys/Debug_Proc/sys_debug_proc.h:
+D:/NUEDC/Car_2.0/app/W25Q128/app_w25q128.h:
+D:/NUEDC/Car_2.0/app/Encoder/app_encoder.h:
+D:/NUEDC/Car_2.0/app/Timer/app_timer.h:
+D:/NUEDC/Car_2.0/lib/task/task.h:

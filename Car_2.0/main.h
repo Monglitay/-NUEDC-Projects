@@ -8,4 +8,12 @@
 #include "delay.h"
 #include "key.h"
 #include "app_AT8236.h"
+#include "app_servos.h"
+#include "app_ckp.h"
+#include "app_adc.h"
+#include "sys_broad_init.h"
+#include "sys_debug_proc.h"
+#include "app_w25q128.h"
+#include "app_encoder.h"
+#include "app_timer.h"
 #endif

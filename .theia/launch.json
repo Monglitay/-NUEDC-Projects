@@ -2,15 +2,6 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Car_2.0",
-            "type": "ccs-debug",
-            "request": "launch",
-            "projectInfo": {
-                "name": "Car_2.0",
-                "resourceId": "/Car_2.0"
-            }
-        },
-        {
             "name": "Patrol Car",
             "type": "ccs-debug",
             "request": "launch",
@@ -26,6 +17,22 @@
             "projectInfo": {
                 "name": "Car_2.0",
                 "resourceId": "/Car_2.0/__ccs_generatedSource"
+            }
+        },
+        {
+            "name": "Car_2.0",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "Car_2.0",
+                "resourceId": "/Car_2.0"
+            },
+            "debuggerSettings": {
+                "targetConfigs/MSPM0G3507.ccxml": {
+                    "Texas Instruments XDS110 USB Debug Probe_0/CORTEX_M0P": {
+                        "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n<PropertyValues>\n\n  <property id=\"FlashFiles\">\n    <curValue></curValue>\n  </property>\n\n</PropertyValues>\n"
+                    }
+                }
             }
         }
     ]

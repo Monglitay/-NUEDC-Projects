@@ -1,8 +1,7 @@
 # FIXED
 
 app/AT8236/app_AT8236.o: ../app/AT8236/app_AT8236.c \
- ../app/AT8236/app_AT8236.h \
- syscfg/ti_msp_dl_config.h \
+ ../app/AT8236/app_AT8236.h ti_msp_dl_config.h \
  C:/TI/mspm0_sdk_2_04_00_06/source/ti/devices/msp/msp.h \
  C:/TI/mspm0_sdk_2_04_00_06/source/ti/devices/DeviceFamily.h \
  C:/TI/mspm0_sdk_2_04_00_06/source/ti/devices/msp/m0p/mspm0g350x.h \
@@ -77,7 +76,7 @@ app/AT8236/app_AT8236.o: ../app/AT8236/app_AT8236.c \
  C:/TI/mspm0_sdk_2_04_00_06/source/ti/driverlib/m0p/dl_interrupt.h \
  C:/TI/mspm0_sdk_2_04_00_06/source/ti/driverlib/m0p/dl_systick.h
 ../app/AT8236/app_AT8236.h:
-syscfg/ti_msp_dl_config.h:
+ti_msp_dl_config.h:
 C:/TI/mspm0_sdk_2_04_00_06/source/ti/devices/msp/msp.h:
 C:/TI/mspm0_sdk_2_04_00_06/source/ti/devices/DeviceFamily.h:
 C:/TI/mspm0_sdk_2_04_00_06/source/ti/devices/msp/m0p/mspm0g350x.h:
